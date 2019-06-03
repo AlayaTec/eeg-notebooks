@@ -6,13 +6,26 @@ from optparse import OptionParser
 from pylsl import StreamInfo, StreamOutlet
 
 
-def present(duration=120):
+def present(duration=120, flag_enable_OpenBCI):
+    '''
+    flag_enable_OpenBCI:
+    1: enable automatically duplicate a 2nd marker channel
+    0: no 2nd channel
+    '''
 
     # create
-    info = StreamInfo('Markers', 'Markers', 1, 0, 'int32', 'myuidw43536')
+    info_muse = StreamInfo('muse_marker', 'Markers', 1, 0, 'int32', 'myuidw43536')
 
     # next make an outlet
-    outlet = StreamOutlet(info)
+    outlet_muse = StreamOutlet(info_muse)
+
+    if flag_enable_OpenBCI:
+        info_OpenBCI = StreamInfo('muse_OpenBCI', 'Markers', 1, 0, 'int32', 'idOpenBCI')
+
+        # next make an outlet
+        outlet_OpenBCI = StreamOutlet(info_OpenBCI)
+
+    # changed LZ 06-03-2019
 
     markernames = [1, 2]
 
@@ -31,8 +44,9 @@ def present(duration=120):
                             timestamp=np.zeros(n_trials)))
 
     # graphics
-    mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
-                          fullscr=True)
+    # mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg",
+    #                       fullscr=True)
+    mywin = visual.Window([1920, 1080], monitor="testMonitor", units="deg")
     grating = visual.GratingStim(win=mywin, mask='circle', size=20, sf=2)
     fixation = visual.GratingStim(win=mywin, size=0.2, pos=[0, 0], sf=0,
                                   rgb=[1, 0, 0])
@@ -48,7 +62,9 @@ def present(duration=120):
         grating.draw()
         fixation.draw()
         timestamp = time()
-        outlet.push_sample([markernames[pos]], timestamp)
+        outlet_muse.push_sample([markernames[pos]], timestamp)
+        if filterwarnings
+            outlet_OpenBCI.push_sample([markernames[pos]], timestamp) # LZ 06/03/2019
         mywin.flip()
 
         # offset
