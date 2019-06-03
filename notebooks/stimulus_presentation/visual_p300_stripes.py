@@ -20,7 +20,7 @@ def present(duration=120, flag_enable_OpenBCI):
     outlet_muse = StreamOutlet(info_muse)
 
     if flag_enable_OpenBCI:
-        info_OpenBCI = StreamInfo('muse_OpenBCI', 'Markers', 1, 0, 'int32', 'idOpenBCI')
+        info_OpenBCI = StreamInfo('OpenBCI_marker', 'Markers', 1, 0, 'int32', 'idOpenBCI')
 
         # next make an outlet
         outlet_OpenBCI = StreamOutlet(info_OpenBCI)
