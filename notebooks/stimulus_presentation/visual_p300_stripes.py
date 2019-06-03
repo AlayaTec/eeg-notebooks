@@ -63,7 +63,7 @@ def present(duration=120, flag_enable_OpenBCI):
         fixation.draw()
         timestamp = time()
         outlet_muse.push_sample([markernames[pos]], timestamp)
-        if filterwarnings
+        if flag_enable_OpenBCI:
             outlet_OpenBCI.push_sample([markernames[pos]], timestamp) # LZ 06/03/2019
         mywin.flip()
 
