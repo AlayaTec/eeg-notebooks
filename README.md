@@ -51,18 +51,16 @@ Go to the directory ~/eeg-notebooks/notebooks, run
 
 `python run_multi-devices_stim.py --duration [duration_of_session] --subject [index_of_subject] --run [index_of_block] --experiment [name_of_experiment]`
 
-*Note:
-For SSEVP, name_of_experiment is 'ssvep'.
-For N170, name_of_experiment is 'n170'.
-For P300, name_of_experiment is 'visual_p300_stripes'.*
+Currently available experiments:
+- N170 (Faces & Houses), name_of_experiment is 'n170'.
+- SSVEP, name_of_experiment is 'ssvep'.
+- Visual P300, name_of_experiment is 'visual_p300_stripes'.
 
 Visualizing ERPs requires averaging the EEG response over many different rounds of stimulus presentation. Depending on experimental conditions, this may require as little as one two minute trial or as many as 6. We recommend repeating the above experiment 3-6 times before proceeding.
 Make sure to take breaks, though! Inattention, fatigue, and distraction will decrease the quality of event-related potentials.
 
 
-*Note: if errors are encountered during viewing of the eeg data, try starting the viewer directly from the command line (`muselsl view`). Version 2 of the viewer may work better on Windows computers (`muselsl view -v 2`)
-
-Currently available experiments:
-- N170 (Faces & Houses)
-- SSVEP
-- Visual P300
+## Analyze the data
+You can now open the notebook associated with your experiment (N170, P300, SSVEP).
+Run the first cell that imports all the tools you will need, then skip to Step 4.
+Replace subject and session with the subject and session you wish to analyze.
