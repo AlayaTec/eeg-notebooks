@@ -13,7 +13,7 @@ Currently, a collection of classic EEG experiments implemented in Python and Jup
 Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advanced installation instructions and complete info about the project.
 
 
-## Getting MUSE prepared
+## Getting MUSE Prepared
 
 Follow installation instructions [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html).
 
@@ -33,7 +33,7 @@ To stream data from all sensors in a Muse 2 from the command line:
 
 For details refer to [here](https://github.com/alexandrebarachant/muse-lsl).
 
-## Getting OpenBCI prepared
+## Getting OpenBCI Prepared
 
 Install the OpenBCI GUI [here](https://github.com/OpenBCI/OpenBCI_GUI).
 
@@ -60,7 +60,7 @@ Visualizing ERPs requires averaging the EEG response over many different rounds 
 Make sure to take breaks, though! Inattention, fatigue, and distraction will decrease the quality of event-related potentials.
 
 
-## Analyze the data
+## Analyze the Data
 You can now open the notebook associated with your experiment (N170, P300, SSVEP).
 Run the first cell that imports all the tools you will need, then skip to Step 4.
 Replace subject and session with the subject and session you wish to analyze.
