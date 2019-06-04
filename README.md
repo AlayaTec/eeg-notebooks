@@ -12,6 +12,8 @@ Currently, a collection of classic EEG experiments implemented in Python and Jup
 
 Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advanced installation instructions and complete info about the project.
 
+See [here](https://github.com/AlayaTec/eeg-notebooks/blob/master/docs/Project%20Plan.docx) for the project plan.
+
 
 ## Getting MUSE Prepared
 
@@ -22,14 +24,15 @@ If you are a Mac user, follow the installation instructions [here](https://githu
 Make sure your device is turned on and run the following code. It should detect and connect to the device and begin 'Streaming...' If the device is not found or the connection times out, try running this code again
 
 Connect to the desired Muse
-`muselsl stream --name [name_of_Muse]`
+`muselsl stream --name [name_of_Muse]`.
+
 *Name for Muse 1: Muse-5EAD. Name for Muse 2: Muse-1C44.*
 
 View the streamed data
-`muselsl view -v 2`
+`muselsl view -v 2`.
 
 To stream data from all sensors in a Muse 2 from the command line:
-`muselsl stream --ppg --acc --gyro`
+`muselsl stream --ppg --acc --gyro`.
 
 For details refer to [here](https://github.com/alexandrebarachant/muse-lsl).
 
@@ -64,3 +67,7 @@ Make sure to take breaks, though! Inattention, fatigue, and distraction will dec
 You can now open the notebook associated with your experiment (N170, P300, SSVEP).
 Run the first cell that imports all the tools you will need, then skip to Step 4.
 Replace subject and session with the subject and session you wish to analyze.
+
+
+## Stratigic plan
+See [here](https://github.com/AlayaTec/eeg-notebooks/tree/master/docs/proxy%20mental%20states).
