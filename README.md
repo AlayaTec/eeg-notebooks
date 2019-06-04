@@ -4,9 +4,9 @@
 ### NOTE:
 This is a fork of [https://github.com/amandakeasson/eeg-notebooks.git](https://github.com/amandakeasson/eeg-notebooks.git), with modifications so that multiple other devices (currently OpenBCI Ganglion) can be running together alone with MUSE with signals synchronized.
 
-This repo is a work in progress with the goal of making it easy to perform  experiments (with PsychoPy) and automatically analyze data.
+This repo is a work in progress with the goal of making it easy to perform  experiments (with [PsychoPy](https://www.psychopy.org)) and automatically analyze data.
 
-For a mid-term goal, this tool is to integrated into the repo of Report-Pipelines.
+For a mid-term goal, this tool is to integrated into the repo of [Report-Pipelines](https://github.com/AlayaTec/Reporting-Pipeline).
 
 Currently, a collection of classic EEG experiments implemented in Python and Jupyter notebooks. All experiments are implemented for the EEG devices MUSE and OpenBCU and based on work done by Alexandre Barachant and Hubert Banville for the [muse-lsl](https://github.com/alexandrebarachant/muse-lsl) library.
 
@@ -15,9 +15,9 @@ Please see the [documentation](http://eeg-notebooks.readthedocs.io/) for advance
 
 ## Getting MUSE prepared
 
-Follow installation instructions [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html)
+Follow installation instructions [here](http://eeg-notebooks.readthedocs.io/en/latest/setup_instructions_windows.html).
 
-If you are a Mac user, follow the installation instructions [here](https://github.com/AlayaTec/eeg-notebooks/blob/master/mac_multi_devices_instructions_neurobrite.docx)
+If you are a Mac user, follow the installation instructions [here](https://github.com/AlayaTec/eeg-notebooks/blob/master/mac_multi_devices_instructions_neurobrite.docx).
 
 Make sure your device is turned on and run the following code. It should detect and connect to the device and begin 'Streaming...' If the device is not found or the connection times out, try running this code again
 
@@ -32,13 +32,13 @@ View the streamed data
 
 To stream data from all sensors in a Muse 2 from the command line:
 `muselsl stream --ppg --acc --gyro`
-For details refer to [here] (https://github.com/alexandrebarachant/muse-lsl)
+For details refer to [here](https://github.com/alexandrebarachant/muse-lsl).
 
 ## Getting OpenBCI prepared
 
-Install the OpenBCI GUI [here] (https://github.com/OpenBCI/OpenBCI_GUI)
+Install the OpenBCI GUI [here](https://github.com/OpenBCI/OpenBCI_GUI).
 
-Follow the instructions to connect OpenBCI Ganglion from [here] (https://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide) and start data stream.
+Follow the instructions to connect OpenBCI Ganglion from [here](https://docs.openbci.com/Tutorials/02-Ganglion_Getting%20Started_Guide) and start data stream.
 
 Under the Networking block, change the Data Type of Stream 1 to TimeSeries. Change the Type of Stream 1 to EEG_OpenBCI.
 
